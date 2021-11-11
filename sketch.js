@@ -10,6 +10,8 @@ var life =3;
 var score=0;
 var gameState=1
 
+var theme;
+
 function preload(){
   gunImg = loadImage("gun1.png")
   blastImg = loadImage("blast.png")
@@ -17,6 +19,7 @@ function preload(){
   blueBubbleImg = loadImage("waterBubble.png")
   redBubbleImg = loadImage("redbubble.png")
   backBoardImg= loadImage("back.jpg")
+  theme = loadImage("theme.mp3");
 }
 function setup() {
   createCanvas(800, 800);
@@ -34,6 +37,8 @@ function setup() {
   
   heading= createElement("h1");
   scoreboard= createElement("h1");
+  
+  theme.loop();
 }
 
 function draw() {
